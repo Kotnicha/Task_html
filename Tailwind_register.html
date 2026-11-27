@@ -1,0 +1,190 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ระบบลงทะเบียนนักศึกษาใหม่</title>
+
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-blue-50 text-gray-800 font-sans leading-relaxed">
+
+    
+    <header id="main-header"
+        class="bg-blue-200 text-blue-900 text-center p-6">
+
+        <h1 class="text-2xl font-bold">
+            ระบบลงทะเบียนนักศึกษาใหม่
+        </h1>
+
+        <p class="mt-2">
+            กรุณากรอกข้อมูลให้ครบถ้วนเพื่อสมัครเข้าศึกษา
+        </p>
+
+    </header>
+
+    <hr class="border-gray-300">
+
+    <main>
+
+        <div class="w-4/5 max-w-3xl mx-auto my-5 bg-white p-5 rounded-lg">
+
+            <form>
+
+                
+                <fieldset class="mb-5 p-4 border border-gray-400 rounded-lg">
+
+                    <legend class="font-bold text-blue-700 px-2">
+                        หมวดที่ 1 : ข้อมูลการเข้าสู่ระบบ
+                    </legend>
+
+                    <div class="mb-4">
+                        <label for="username">
+                            ชื่อผู้ใช้ (Username): <span class="text-red-500">*</span>
+                        </label>
+
+                        <input type="text" id="username" name="username" required
+                            class="block w-full p-2 mt-1 border border-gray-300 rounded-md">
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="password">
+                            รหัสผ่าน (Password): <span class="text-red-500">*</span>
+                        </label>
+
+                        <input type="password" id="password" name="password" required
+                            class="block w-full p-2 mt-1 border border-gray-300 rounded-md">
+                    </div>
+
+                </fieldset>
+
+                
+                <fieldset class="mb-5 p-4 border border-gray-400 rounded-lg">
+
+                    <legend class="font-bold text-blue-700 px-2">
+                        ข้อมูลส่วนตัว
+                    </legend>
+
+                    <div class="mb-4">
+                        <label for="fullname">
+                            ชื่อ-นามสกุล: <span class="text-red-500">*</span>
+                        </label>
+
+                        <input type="text" id="fullname" name="fullname"
+                            placeholder="เช่น นางสาวกชณิชา วิจาราณ์" required
+                            class="block w-full p-2 mt-1 border border-gray-300 rounded-md">
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="email">
+                            อีเมล: <span class="text-red-500">*</span>
+                        </label>
+
+                        <input type="email" id="email" name="email" required
+                            class="block w-full p-2 mt-1 border border-gray-300 rounded-md">
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="birthday">
+                            วัน/เดือน/ปีเกิด:
+                        </label>
+
+                        <input type="date" id="birthday" name="birthday"
+                            class="block w-full p-2 mt-1 border border-gray-300 rounded-md">
+                    </div>
+
+                    <div class="mb-4">
+                        <p>เพศ:</p>
+
+                        <input type="radio" id="male" name="gender" value="ชาย">
+                        <label for="male">ชาย</label>
+
+                        <input type="radio" id="female" name="gender" value="หญิง">
+                        <label for="female">หญิง</label>
+
+                        <input type="radio" id="other" name="gender" value="อื่นๆ">
+                        <label for="other">อื่นๆ</label>
+                    </div>
+
+                </fieldset>
+
+                
+                <fieldset class="mb-5 p-4 border border-gray-400 rounded-lg">
+
+                    <legend class="font-bold text-blue-700 px-2">
+                        ข้อมูลการศึกษาและอื่นๆ
+                    </legend>
+
+                    <div class="mb-4">
+                        <label for="education">ระดับชั้น:</label>
+
+                        <select id="education" name="education"
+                            class="block w-full p-2 mt-1 border border-gray-300 rounded-md">
+
+                            <option value="">-- กรุณาเลือกระดับชั้น --</option>
+                            <option value="ปวช.1">ปวช.1</option>
+                            <option value="ปวช.2">ปวช.2</option>
+                            <option value="ปวช.3">ปวช.3</option>
+                            <option value="ปวส.1">ปวส.1</option>
+                            <option value="ปวส.2">ปวส.2</option>
+
+                        </select>
+                    </div>
+
+                    <div class="mb-4">
+                        <p>ความสนใจเพิ่มเติม (เลือกได้มากกว่า 1 ข้อ):</p>
+
+                        <input type="checkbox" id="web" name="interest" value="Web Design">
+                        <label for="web">Web Design</label>
+
+                        <input type="checkbox" id="database" name="interest" value="Database">
+                        <label for="database">Database</label>
+
+                        <input type="checkbox" id="coding" name="interest" value="Coding">
+                        <label for="coding">Coding</label>
+                    </div>
+
+                    <div class="mb-4">
+                        <label for="address">ที่อยู่ปัจจุบัน:</label>
+
+                        <textarea id="address" name="address"
+                            rows="4" cols="50"
+                            placeholder="กรุณากรอกที่อยู่ปัจจุบัน"
+                            class="block w-full p-2 mt-1 border border-gray-300 rounded-md"></textarea>
+                    </div>
+
+                </fieldset>
+
+                
+                <button type="submit"
+                    class="bg-blue-600 text-white px-5 py-2 rounded-md m-1">
+                    ลงทะเบียน
+                </button>
+
+                <button type="reset"
+                    class="bg-gray-500 text-white px-5 py-2 rounded-md m-1">
+                    ล้างข้อมูล
+                </button>
+
+            </form>
+
+        </div>
+
+    </main>
+
+    <hr class="border-gray-300">
+
+    
+    <footer id="main-footer"
+        class="text-center p-4 text-gray-600">
+
+        <p>สงวนลิขสิทธิ์ © 2026 แผนกวิชาเทคโนโลยีสารสนเทศ</p>
+        <p>วิทยาลัยเทคนิคสุราษฎร์ธานี</p>
+
+    </footer>
+
+</body>
+</html>
